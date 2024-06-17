@@ -1,3 +1,3 @@
 bug fix
 
-Feature added to the projecta
+Feature added to the project
