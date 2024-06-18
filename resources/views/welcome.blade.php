@@ -6,3 +6,5 @@ New feature
 
 
 Breaking changes
+
+New change
