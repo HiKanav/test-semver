@@ -7,4 +7,4 @@ New feature
 
 Breaking changes
 
-New change
+New fix
