@@ -6,6 +6,9 @@ on:
       - main
       - master
 
+permissions:
+  contents: write  # Explicitly grant write permissions to contents
+
 jobs:
   auto-tag:
     runs-on: ubuntu-latest
