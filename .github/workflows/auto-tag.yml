@@ -26,7 +26,7 @@ jobs:
         id: tag
         run: |
           # Get the latest tag
-          latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
+          latestTag=$(git describe --tags `git rev-list --tags --max-count=1` 2>/dev/null || echo "")
           echo "Latest tag: $latestTag"
 
           # Generate the new tag based on the latest tag
