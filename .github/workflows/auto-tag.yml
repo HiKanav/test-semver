@@ -53,6 +53,9 @@ jobs:
           fi
           echo "New version: $newVersion"
 
+          # Remove leading 'v' if present
+          newVersion=${newVersion#v}
+          
           # Set output
           echo "::set-output name=new_version::$newVersion"
 
