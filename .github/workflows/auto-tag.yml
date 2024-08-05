@@ -46,16 +46,16 @@ jobs:
           # Generate the new tag based on the latest tag
           if [[ -z "$latestTag" ]]; then
             echo "No tags found. Initializing the first tag."
-            newVersion="1.0.0"
+            newVersion=$(npx standard-version --release-as 1.0.0 --skip.changelog)
           else
             echo "Latest tag: $latestTag"
-            newVersion=$(npm version patch --no-git-tag-version)
+            newVersion=$(npx standard-version --skip.changelog)
           fi
           echo "New version: $newVersion"
 
           # Remove leading 'v' if present
           newVersion=${newVersion#v}
-          
+
           # Set output
           echo "::set-output name=new_version::$newVersion"
 
