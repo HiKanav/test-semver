@@ -40,8 +40,8 @@ jobs:
           echo "Latest tag: $latestTag"
 
           # Set up Git user
-          git config user.name "HiKanav"
-          git config user.email "say@hikanav.com"
+          git config user.name "Omkar [Bot]"
+          git config user.email "Omkar@bot.com"
 
           # Generate the new tag based on the latest tag
           if [[ -z "$latestTag" ]]; then
