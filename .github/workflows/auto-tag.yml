@@ -28,6 +28,13 @@ jobs:
       - name: Generate Tag
         id: tag
         run: |
+          # Fetch all tags
+          git fetch --tags
+
+          # List all tags for debugging purposes
+          echo "Listing all tags:"
+          git tag -l
+          
           # Get the latest tag
           latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
           echo "Latest tag: $latestTag"
